@@ -32,11 +32,11 @@
             <p class="text-[#08080880] mt-3">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
         </div>
         <div class=" min-h-[200px] grid grid-cols-3 gap-4 p-3">
-            <div class="border-2 border-gray-100 text-center p-3  rounded-xl">
+            <div id="add-money" class="border-2 border-gray-100 text-center p-3  rounded-xl">
                 <img src="assets/wallet1.png" class="mx-auto" alt="">
                 <h2>Add Money</h2>
             </div>
-            <div class="border-2 border-gray-100 text-center p-3 rounded-xl">
+            <div id="cash-out" class="border-2 border-gray-100 text-center p-3 rounded-xl">
                 <img src="assets/send1.png" class="mx-auto" alt="">
                 <h2>Cashout</h2>
             </div>
@@ -61,7 +61,7 @@
 
     <div class="all-form-sections max-w-lg mx-auto">
         <!-- add money -->
-        <div>
+        <div id="add-money-parent">
             <h1 class="my-5 font-bold text-xl p-3">Add Money</h1>
             <form action="" class=" bg-white rounded-2xl p-8 ">
                 <div class="mb-3">
@@ -81,7 +81,7 @@
                 <div>
                     <label class="font-semibold" for="">Amount to Add</label>
                     <br>
-                    <input id="add-amount" type="text" placeholder="Add Amount to withdraw" class="input rounded-3xl mt-3 mb-3 w-full bg-[#F4F5F7]" />
+                    <input id="add-amount" type="text" placeholder="Add Amount to add" class="input rounded-3xl mt-3 mb-3 w-full bg-[#F4F5F7]" />
                 </div>
                 <div>
                     <label class="font-semibold" for="">Pin Number</label>
@@ -92,6 +92,28 @@
             </form>
         </div>
 
+        <!-- cash out -->
+        <div id="cash-out-parent" style="display: none;">
+            <h1 class="my-5 font-bold text-xl p-3">Cash Out</h1>
+            <form action="" class=" bg-white rounded-2xl p-8 ">
+                <div>
+                    <label class="font-semibold" for="">Agent Number</label>
+                    <br>
+                    <input id="agent-number" type="text" placeholder="Enter 11 digit number" class="input rounded-3xl mt-3 mb-3 bg-[#F4F5F7] w-full" />
+                </div>
+                <div>
+                    <label class="font-semibold" for="">Amount</label>
+                    <br>
+                    <input id="cash-out-amount" type="text" placeholder="Enter Amount to withdraw" class="input rounded-3xl mt-3 mb-3 w-full bg-[#F4F5F7]" />
+                </div>
+                <div>
+                    <label class="font-semibold" for="">Pin Number</label>
+                    <br>
+                    <input id="cash-out-pin" type="text" placeholder="Enter 4 digit pin number" class="input rounded-3xl mt-3  bg-[#F4F5F7] w-full" />
+                </div>
+                 <button id="cash-out-btn" class="btn mt-5 bg-[#0874F2] text-white w-full rounded-3xl">Withdraw Money</button>
+            </form>
+        </div>
     </div>
 
     <script src="home.js"></script>
