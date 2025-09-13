@@ -15,6 +15,8 @@ function getInputValue(id) {
     return inputFieldValue
 }
 
+
+
 //add money
 document.getElementById('add-money-btn').addEventListener('click',function(event){
     event.preventDefault()
@@ -40,16 +42,6 @@ document.getElementById('add-money-btn').addEventListener('click',function(event
     document.getElementById('available-balance').innerText = totalAvailableBalance
 })
 
-// toggling features
-
-document.getElementById('add-money').addEventListener('click',function(){
-    document.getElementById('cash-out-parent').style.display = 'none'
-    document.getElementById('add-money-parent').style.display = 'block'
-})
-document.getElementById('cash-out').addEventListener('click',function(){
-    document.getElementById('add-money-parent').style.display = 'none'
-    document.getElementById('cash-out-parent').style.display = 'block'
-})
 
 
 
@@ -75,4 +67,44 @@ document.getElementById('cash-out-btn').addEventListener('click',function(event)
     //update balance to add money
     const totalAvailableBalance = updateBalance - cashoutAmount
     document.getElementById('available-balance').innerText = totalAvailableBalance
+})
+
+
+
+// toggling features
+
+document.getElementById('add-money').addEventListener('click',function(){
+    document.getElementById('cash-out-parent').style.display = 'none'
+    document.getElementById('transfer-money-parent').style.display = 'none'
+    document.getElementById('get-bouns-parent').style.display = 'none'
+    document.getElementById('payBill-parent').style.display = 'none'
+    document.getElementById('add-money-parent').style.display = 'block'
+})
+document.getElementById('cash-out').addEventListener('click',function(){
+    document.getElementById('add-money-parent').style.display = 'none'
+    document.getElementById('transfer-money-parent').style.display = 'none'
+    document.getElementById('get-bouns-parent').style.display = 'none'
+    document.getElementById('payBill-parent').style.display = 'none'
+    document.getElementById('cash-out-parent').style.display = 'block'
+})
+document.getElementById('transfer-btn').addEventListener('click',function(){
+    document.getElementById('add-money-parent').style.display = 'none'
+    document.getElementById('cash-out-parent').style.display = 'none'
+    document.getElementById('get-bouns-parent').style.display = 'none'
+    document.getElementById('payBill-parent').style.display = 'none'
+    document.getElementById('transfer-money-parent').style.display = 'block'
+})
+document.getElementById('getBonus-btn').addEventListener('click',function(){
+    document.getElementById('add-money-parent').style.display = 'none'
+    document.getElementById('cash-out-parent').style.display = 'none'
+    document.getElementById('transfer-money-parent').style.display = 'none'
+    document.getElementById('payBill-parent').style.display = 'none'
+    document.getElementById('get-bouns-parent').style.display = 'block'
+})
+document.getElementById('payBill-btn').addEventListener('click',function(){
+    document.getElementById('add-money-parent').style.display = 'none'
+    document.getElementById('cash-out-parent').style.display = 'none'
+    document.getElementById('transfer-money-parent').style.display = 'none'
+    document.getElementById('get-bouns-parent').style.display = 'none'
+    document.getElementById('payBill-parent').style.display = 'block'
 })
