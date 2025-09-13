@@ -1,6 +1,6 @@
 const validPin = 1285
 
-
+//funtion for code Reusable
 function getInputValueNumber (id){
     const inputField = document.getElementById(id)
     const inputFieldValue = inputField.value
@@ -9,13 +9,18 @@ function getInputValueNumber (id){
     return inputFieldValueNumber
 }
 
+function getInputValue(id) {
+    const inputField = document.getElementById(id)
+    const inputFieldValue = inputField.value
+    return inputFieldValue
+}
 
 //add money
 document.getElementById('add-money-btn').addEventListener('click',function(event){
     event.preventDefault()
 
     const bank = document.getElementById('add-bank').value 
-    const accountNumber = document.getElementById('add-number').value
+    const accountNumber = getInputValue('add-number')
     const amount = getInputValueNumber('add-amount')
     const pin = getInputValueNumber('add-pin')
 
