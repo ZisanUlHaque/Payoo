@@ -1,13 +1,23 @@
 const validPin = 1285
 
+
+function getInputValueNumber (id){
+    const inputField = document.getElementById(id)
+    const inputFieldValue = inputField.value
+    const inputFieldValueNumber = parseInt(inputFieldValue)
+
+    return inputFieldValueNumber
+}
+
+
 //add money
 document.getElementById('add-money-btn').addEventListener('click',function(event){
     event.preventDefault()
 
     const bank = document.getElementById('add-bank').value 
     const accountNumber = document.getElementById('add-number').value
-    const amount = parseInt(document.getElementById('add-amount').value)
-    const pin = parseInt(document.getElementById('add-pin').value)
+    const amount = getInputValueNumber('add-amount')
+    const pin = getInputValueNumber('add-pin')
 
     const availableBalance = parseInt(document.getElementById('available-balance').innerText)
 
@@ -35,6 +45,8 @@ document.getElementById('cash-out').addEventListener('click',function(){
     document.getElementById('add-money-parent').style.display = 'none'
     document.getElementById('cash-out-parent').style.display = 'block'
 })
+
+
 
 // cash out 
 document.getElementById('cash-out-btn').addEventListener('click',function(event){
