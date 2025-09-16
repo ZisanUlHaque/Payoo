@@ -127,7 +127,12 @@ document.getElementById('payBill-btn').addEventListener('click',function(){
     document.getElementById('cash-out-parent').style.display = 'none'
     document.getElementById('transfer-money-parent').style.display = 'none'
     document.getElementById('get-bouns-parent').style.display = 'none'
+    document.getElementById('transaction-parent').style.display = 'none'
     document.getElementById('payBill-parent').style.display = 'block'
 
     handleButtonToggle('payBill-btn')
+})
+document.getElementById('Transaction-btn').addEventListener('click',function(){
+    handleToggle('transaction-parent')
+    handleButtonToggle('Transaction-btn')
 })
