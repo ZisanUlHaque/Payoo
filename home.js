@@ -1,4 +1,4 @@
-const validPin = 1285
+const validPin = 1234
 const transactionData = []
 //funtion for code Reusable 
 function getInputValueNumber (id){

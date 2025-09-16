@@ -3,8 +3,8 @@ document.getElementById('login-btn')
 .addEventListener('click',function(e){
     e.preventDefault()
 
-    const mobileNumber = 17870159810
-    const pinNumber = 1285
+    const mobileNumber = 12345678900
+    const pinNumber = 1234
 
     const mobileNumberValue = document.getElementById('mobile-number').value
     const mobileNumberValueConverted = parseInt(mobileNumberValue)
