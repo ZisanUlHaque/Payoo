@@ -109,7 +109,7 @@ document.getElementById('cash-out-btn').addEventListener('click',function(event)
 
     const data = {
         name : 'Cash Out',
-        date: new Date().toLocaleDateString()
+        date: new Date().toLocaleTimeString()
     }
     transactionData.push(data)
     console.log(transactionData)
